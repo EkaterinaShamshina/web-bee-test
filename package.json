@@ -39,6 +39,7 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "normalize.css": "^8.0.1"
   }
 }
