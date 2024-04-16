@@ -1,13 +1,339 @@
-$font-inter: 'Inter', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
 
-$gray: #f3f2f0;
-$black: #232326;
-$red: #d40000;
+$black: #505050;
+
+$bg: #f1f1f1;
 $white: #ffffff;
-$bg-gray: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
+$blue: #5095ec;
+$gray: #8f8f8f;
 
-$r_desk_hd: 1200px;
-$r_desk: 1000px;
-$r_tab: 768px;
-$r_tab_600: 600px;
-$r_tab_430: 430px;
+// Переменная переопределяемая в первую очередь
+$primary: #900;
+$enable-shadows: true;
+$prefix: 'mo-';
+html {
+  font-size: 10px;
+}
+body {
+  color: $black;
+  background-color: $bg;
+  font-size: 1.4rem;
+}
+header {
+  background-color: $white;
+}
+.header {
+  box-shadow: 0px 1px 1px 0px #0000001a;
+}
+a {
+  font-family: $font-roboto;
+  font-weight: 400;
+  color: $black;
+  cursor: pointer;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+  &-link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    &::before {
+      content: '';
+      display: block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+    &-statistics {
+      &::before {
+        background-image: url(../images/statistics.svg);
+      }
+    }
+    &-invoices {
+      &::before {
+        background-image: url(../images/invioces.svg);
+      }
+    }
+    &-shedule {
+      &::before {
+        background-image: url(../images/shedule.svg);
+      }
+    }
+    &-profile {
+      &::before {
+        background-image: url(../images/profile.svg);
+      }
+    }
+    &-balance {
+      &::before {
+        background-image: url(../images/balance.svg);
+      }
+    }
+    &-friends {
+      &::before {
+        background-image: url(../images/friends.svg);
+      }
+    }
+    &-events {
+      &::before {
+        background-image: url(../images/events.svg);
+      }
+    }
+    &-settings {
+      &::before {
+        background-image: url(../images/settings.svg);
+      }
+    }
+    &-connections {
+      &::before {
+        background-image: url(../images/connections.svg);
+      }
+    }
+    &-small {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-basis: 4rem;
+      padding: 12px 16px;
+      transition: 0.3s;
+      &::before {
+        content: '';
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 2rem;
+        width: 2rem;
+      }
+      &-activity {
+        &::before {
+          background-image: url(../images/activity.svg);
+        }
+      }
+      &-map {
+        &::before {
+          background-image: url(../images/map.svg);
+        }
+      }
+      &-time {
+        &::before {
+          background-image: url(../images/time.svg);
+        }
+      }
+      &-notes {
+        &::before {
+          background-image: url(../images/notes.svg);
+        }
+      }
+      &-friends {
+        &::before {
+          background-image: url(../images/friends.svg);
+        }
+      }
+      &-photos {
+        &::before {
+          background-image: url(../images/photos.svg);
+        }
+      }
+      &.active {
+        background-color: $bg;
+      }
+      &:hover {
+        background-color: $bg;
+      }
+    }
+  }
+}
+.settings {
+  height: 2rem;
+  width: 2rem;
+}
+.navbar-2 {
+  padding: 0;
+  & ul.nav {
+    gap: 0;
+  }
+}
+.navbar-3 {
+  width: 100%;
+}
+.back-button {
+  display: block;
+  background-image: url(../images/back-arrow.svg);
+  height: 0.96rem;
+  width: 1.4rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  &::after {
+    background-image: url(../images/union.svg);
+    content: '';
+    display: inline-block;
+    height: 2rem;
+    width: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: 0.6s;
+    transition: 0.4s;
+    border: 0;
+  }
+  &.show {
+    &::after {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+.main {
+  margin-top: 3.2rem;
+}
+article {
+  background-color: $white;
+  box-shadow: 0px 0px 2px 0px #0000001a;
+}
+.card {
+  align-items: center;
+  padding: 3.2rem 0;
+  margin-bottom: 3.2rem;
+  border: none;
+  box-shadow: 0px 0px 2px 0px #0000001a;
+  border-radius: 0;
+  &-img-top {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 100%;
+    height: 13.2rem;
+    &-cover {
+      width: 13.2rem;
+      height: 13.2rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & button {
+    border-style: none;
+    &:hover {
+      transform: scale(1.2);
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+  &__picture {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transform: scale(1);
+    opacity: 0.8;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    &_IG {
+      background-image: url(../images/IN.svg);
+    }
+    &_telegram {
+      background-image: url(../images/telegram.svg);
+    }
+    &_whatsapp {
+      background-image: url(../images/whatsapp.svg);
+    }
+  }
+}
+.accordion {
+  margin-top: 3.2rem;
+
+  &-body {
+    display: flex;
+    margin-bottom: 3.2rem;
+  }
+  &-item {
+    border: none;
+    box-shadow: 0px 0px 2px 0px #0000001a;
+  }
+  &-button {
+    font-family: $font-roboto;
+    font-size: 1.4rem;
+
+    &:not(.collapsed) {
+      background-color: $white;
+    }
+  }
+  &-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    width: 100%;
+    &-item {
+      & a {
+        flex-direction: row;
+        gap: 1.6rem;
+      }
+    }
+  }
+}
+.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+  border-radius: 0;
+}
+.hr {
+  width: 100%;
+  color: $black;
+}
+.divider {
+  width: calc(100% + 2 * (var(--bs-accordion-body-padding-x)));
+  margin-left: calc(-1 * (var(--bs-accordion-body-padding-x)));
+}
+.btn {
+  font-family: $font-roboto;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.thoughts-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  font-family: $font-roboto;
+  & .btn {
+    background-color: $blue;
+    transition: 0.3s;
+    &:hover {
+      background-color: blue;
+    }
+  }
+}
+
+textarea {
+  padding: 8px 16px;
+  resize: none;
+  width: 100%;
+  overflow: auto;
+  :focus {
+    outline: none;
+  }
+}
