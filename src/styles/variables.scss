@@ -207,13 +207,18 @@ a {
   }
 }
 .main {
-  margin-top: 3.2rem;
+  margin-top: 2rem;
 }
 article {
   background-color: $white;
   box-shadow: 0px 0px 2px 0px #0000001a;
   &.active {
     padding: 56px 32px 32px;
+  }
+}
+.article {
+  &_image {
+    margin-bottom: 1rem;
   }
 }
 .card {
@@ -265,7 +270,7 @@ article {
 
   &-body {
     display: flex;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
   }
   &-item {
     border: none;
@@ -354,9 +359,21 @@ textarea {
 }
 .blockquote {
   &-comment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     & a {
       color: $blue;
       text-decoration: none;
+    }
+    &::before {
+      content: '';
+      display: block;
+      background-image: url(../images/Comment.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
   & p {
@@ -365,16 +382,5 @@ textarea {
   &-vr {
     width: 2px;
     color: $gray;
-  }
-}
-.comment-author {
-  &::before {
-    content: '';
-    display: block;
-    background-image: url(../images/Comment.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 1.5rem;
-    width: 1.5rem;
   }
 }

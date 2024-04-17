@@ -15618,7 +15618,7 @@ a {
 }
 
 .main {
-  margin-top: 3.2rem;
+  margin-top: 2rem;
 }
 
 article {
@@ -15628,6 +15628,10 @@ article {
 }
 article.active {
   padding: 56px 32px 32px;
+}
+
+.article_image {
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -15693,7 +15697,7 @@ article.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
 }
 .accordion-item {
   border: none;
@@ -15803,19 +15807,20 @@ textarea :focus {
   background-color: #47b091;
 }
 
+.blockquote-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
 .blockquote-comment a {
   color: #5095ec;
   text-decoration: none;
 }
-.blockquote p {
-  line-height: 1rem;
-}
-.blockquote-vr {
-  width: 2px;
-  color: #8f8f8f;
-}
-
-.comment-author::before {
+.blockquote-comment::before {
   content: "";
   display: block;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00IDhDNCA2LjM0MzE1IDUuMzQzMTUgNSA3IDVIMTdDMTguNjU2OSA1IDIwIDYuMzQzMTUgMjAgOFYxNEMyMCAxNS42NTY5IDE4LjY1NjkgMTcgMTcgMTdIOS41MjIxOUw2LjExMjEgMTkuNzI4MUM1LjI2MDkxIDIwLjQwOSA0IDE5LjgwMyA0IDE4LjcxMjlWOFpNNS4zIDE4LjcxMjlMOS4wNjYxNyAxNS43SDE3QzE3LjkzODkgMTUuNyAxOC43IDE0LjkzODkgMTguNyAxNFY4QzE4LjcgNy4wNjExMiAxNy45Mzg5IDYuMyAxNyA2LjNIN0M2LjA2MTEyIDYuMyA1LjMgNy4wNjExMiA1LjMgOEw1LjMgMTguNzEyOVpNOC40OTIxOSA5LjY0MzU2QzguNDkyMTkgOS4yODQ1OCA4Ljc4MzIgOC45OTM1NiA5LjE0MjE5IDguOTkzNTZIMTQuODU3OUMxNS4yMTY5IDguOTkzNTYgMTUuNTA3OSA5LjI4NDU4IDE1LjUwNzkgOS42NDM1NkMxNS41MDc5IDEwLjAwMjUgMTUuMjE2OSAxMC4yOTM2IDE0Ljg1NzkgMTAuMjkzNkw5LjE0MjE5IDEwLjI5MzZDOC43ODMyIDEwLjI5MzYgOC40OTIxOSAxMC4wMDI1IDguNDkyMTkgOS42NDM1NlpNOC40OTIxOSAxMi42MzYxQzguNDkyMTkgMTIuMjc3MSA4Ljc4MzIgMTEuOTg2MSA5LjE0MjE5IDExLjk4NjFMMTIuNzkxMiAxMS45ODYxQzEzLjE1MDIgMTEuOTg2MSAxMy40NDEyIDEyLjI3NzEgMTMuNDQxMiAxMi42MzYxQzEzLjQ0MTIgMTIuOTk1MSAxMy4xNTAyIDEzLjI4NjEgMTIuNzkxMiAxMy4yODYxSDkuMTQyMTlDOC43ODMyIDEzLjI4NjEgOC40OTIxOSAxMi45OTUxIDguNDkyMTkgMTIuNjM2MVoiIGZpbGw9IiM1MDUwNTAiLz4KPC9zdmc+Cg==);
@@ -15823,4 +15828,11 @@ textarea :focus {
   background-repeat: no-repeat;
   height: 1.5rem;
   width: 1.5rem;
+}
+.blockquote p {
+  line-height: 1rem;
+}
+.blockquote-vr {
+  width: 2px;
+  color: #8f8f8f;
 }
