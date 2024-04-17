@@ -1070,7 +1070,7 @@ progress {
 }
 
 .blockquote-footer {
-  margin-top: -1rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
@@ -15439,6 +15439,10 @@ header {
           box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
+footer.blockquote-footer {
+  margin-top: 0;
+}
+
 a {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -15485,6 +15489,9 @@ a {
           align-items: center;
   gap: 8px;
   padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .nav-link-item::before {
   content: "";
@@ -15644,23 +15651,8 @@ article {
           box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 0;
 }
-.card-img-top {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 13.2rem;
-}
-.card-img-top-cover {
-  width: 13.2rem;
-  height: 13.2rem;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
+.card-img {
+  max-width: 13.2rem;
 }
 
 .social {
@@ -15725,6 +15717,9 @@ article {
 .accordion-button:not(.collapsed) {
   background-color: #ffffff;
 }
+.accordion-button:focus {
+  border: none;
+}
 .accordion-nav {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -15734,6 +15729,18 @@ article {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 1.6rem;
+  width: 100%;
+}
+.accordion-nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 .accordion-nav-item a {
@@ -15793,4 +15800,27 @@ textarea {
 }
 textarea :focus {
   outline: none;
+}
+
+.badge-circle {
+  border-radius: 8px;
+  padding: 0px 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+.badge-balance {
+  color: #8f8f8f;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  padding: 0;
+  font-weight: 400;
+}
+.badge.bg-red {
+  background-color: #e33939;
+}
+.badge.bg-green {
+  background-color: #47b091;
 }
