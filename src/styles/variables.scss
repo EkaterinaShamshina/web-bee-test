@@ -251,6 +251,27 @@ article {
       }
     }
   }
+  &-header {
+    &__name {
+      flex: 1;
+    }
+    &__time {
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      &::before {
+        content: '';
+        display: block;
+        background-image: url(../images/time.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
 }
 .card {
   align-items: center;
@@ -301,7 +322,6 @@ article {
 
   &-body {
     display: flex;
-    margin-bottom: 2rem;
   }
   &-item {
     border: none;
@@ -310,9 +330,6 @@ article {
   &-button {
     &:not(.collapsed) {
       background-color: $white;
-    }
-    &:focus {
-      border: none;
     }
   }
   &-nav {
@@ -332,9 +349,7 @@ article {
     }
   }
 }
-.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
-  border-radius: 0;
-}
+
 .hr {
   width: 100%;
   color: $black;

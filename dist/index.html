@@ -116,12 +116,14 @@
                   </a>
 
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                    <li><a class="dropdown-item fs-6" href="#">Setting</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Another setting</a>
+                      <a class="dropdown-item fs-6" href="#">Another setting</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item fs-6" href="#"
+                        >Something else here</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -175,6 +177,70 @@
               </p>
             </div>
           </article>
+          <article>
+            <div class="accordion accordion-flush" id="accordionArticle">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="true"
+                    aria-controls="collapseThree"
+                  >
+                    <p class="article-header__name mb-0">
+                      Sunset Sunset Sunset
+                    </p>
+                    <p class="article-header__time mb-0">53 minutes ago</p>
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionArticle"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the article body.</strong> As I understand
+                    it, this is the same article as the article above, only
+                    closed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="accordion accordion-flush" id="accordionArticle">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="true"
+                    aria-controls="collapseFour"
+                  >
+                    <p class="article-header__name mb-0">Morning of Siberia</p>
+                    <p class="article-header__time mb-0">56 minutes ago</p>
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionArticle"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the article body.</strong> As I understand
+                    it, this is the same article as the article above, only
+                    closed.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </main>
         <aside class="col-3">
           <div class="card">
@@ -209,25 +275,25 @@
               </div>
             </div>
           </div>
-          <div class="accordion" id="accordionExample">
+          <div class="accordion accordion-flush" id="accordionNavigation">
             <div class="accordion-item">
               <h2 class="accordion-header" id="accordionOne">
                 <button
-                  class="accordion-button collapsed"
+                  class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
+                  data-bs-target="#collapseOne"
                   aria-expanded="false"
-                  aria-controls="collapseTwo"
+                  aria-controls="collapseOne"
                 >
                   Navigation
                 </button>
               </h2>
               <div
-                id="collapseTwo"
-                class="accordion-collapse collapse"
+                id="collapseOne"
+                class="accordion-collapse collapse show"
                 aria-labelledby="accordionOne"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#accordionNavigation"
               >
                 <div class="accordion-body">
                   <nav class="navbar navbar-3">
@@ -284,25 +350,25 @@
               </div>
             </div>
           </div>
-          <div class="accordion" id="accordionExample">
+          <div class="accordion accordion-flush" id="accordionForm">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button
                   class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
+                  data-bs-target="#collapseTwo"
                   aria-expanded="true"
-                  aria-controls="collapseOne"
+                  aria-controls="collapseTwo"
                 >
                   Share your thoughts
                 </button>
               </h2>
               <div
-                id="collapseOne"
+                id="collapseTwo"
                 class="accordion-collapse collapse show"
                 aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#accordionForm"
               >
                 <div class="accordion-body">
                   <form class="thoughts-form">

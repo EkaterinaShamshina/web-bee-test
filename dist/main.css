@@ -15666,6 +15666,34 @@ article.active {
   height: 1.5rem;
   width: 1.5rem;
 }
+.article-header__name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.article-header__time {
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.article-header__time::before {
+  content: "";
+  display: block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNTQxNjcgNC43OTQ1M0M4LjU0MTY3IDQuNDk1MzggOC4yOTkxNSA0LjI1Mjg2IDggNC4yNTI4NkM3LjcwMDg1IDQuMjUyODYgNy40NTgzMyA0LjQ5NTM4IDcuNDU4MzMgNC43OTQ1M1Y4LjU0NDUzQzcuNDU4MzMgOC44NDM2OCA3LjcwMDg1IDkuMDg2MiA4IDkuMDg2MkgxMS4zMzMzQzExLjYzMjUgOS4wODYyIDExLjg3NSA4Ljg0MzY4IDExLjg3NSA4LjU0NDUzQzExLjg3NSA4LjI0NTM4IDExLjYzMjUgOC4wMDI4NiAxMS4zMzMzIDguMDAyODZIOC41NDE2N1Y0Ljc5NDUzWiIgZmlsbD0iIzUwNTA1MCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAuNSA4QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhDMTUuNSAxMi4xNDIxIDEyLjE0MjEgMTUuNSA4IDE1LjVDMy44NTc4NiAxNS41IDAuNSAxMi4xNDIxIDAuNSA4Wk04IDEuNTgzMzNDNC40NTYxNyAxLjU4MzMzIDEuNTgzMzMgNC40NTYxNyAxLjU4MzMzIDhDMS41ODMzMyAxMS41NDM4IDQuNDU2MTcgMTQuNDE2NyA4IDE0LjQxNjdDMTEuNTQzOCAxNC40MTY3IDE0LjQxNjcgMTEuNTQzOCAxNC40MTY3IDhDMTQuNDE2NyA0LjQ1NjE3IDExLjU0MzggMS41ODMzMyA4IDEuNTgzMzNaIiBmaWxsPSIjNTA1MDUwIi8+Cjwvc3ZnPgo=);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
 .card {
   -webkit-box-align: center;
@@ -15730,7 +15758,6 @@ article.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 2rem;
 }
 .accordion-item {
   border: none;
@@ -15739,9 +15766,6 @@ article.active {
 }
 .accordion-button:not(.collapsed) {
   background-color: #ffffff;
-}
-.accordion-button:focus {
-  border: none;
 }
 .accordion-nav {
   -webkit-box-orient: vertical;
@@ -15772,10 +15796,6 @@ article.active {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 1rem;
-}
-
-.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
-  border-radius: 0;
 }
 
 .hr {
