@@ -15789,15 +15789,19 @@ textarea :focus {
   outline: none;
 }
 
+.badge {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
 .badge-circle {
   border-radius: 8px;
   padding: 0px 5px;
   text-decoration: none;
-  line-height: 1.6rem;
+  line-height: 1rem;
 }
 .badge-balance {
   color: #8f8f8f;
-  line-height: 1.4rem;
+  line-height: 0.875rem;
   padding: 0;
 }
 .badge.bg-red {
