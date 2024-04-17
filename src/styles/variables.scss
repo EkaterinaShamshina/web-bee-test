@@ -220,6 +220,37 @@ article {
   &_image {
     margin-bottom: 1rem;
   }
+  &-footer {
+    display: flex;
+    gap: 2rem;
+    &-number {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      &_eye {
+        &::before {
+          content: '';
+          display: block;
+          background-image: url(../images/eye.svg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+      &_comment {
+        &::before {
+          content: '';
+          display: block;
+          background-image: url(../images/Comment.svg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+    }
+  }
 }
 .card {
   align-items: center;
