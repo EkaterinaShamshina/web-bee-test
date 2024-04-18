@@ -47,6 +47,7 @@ a {
   &-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
   &-link-item {
     display: flex;
@@ -222,6 +223,7 @@ aside {
   flex-direction: column;
   gap: 2rem;
   flex-basis: 20.5%;
+  margin-bottom: 2rem;
 }
 article {
   background-color: $white;
@@ -447,4 +449,7 @@ textarea {
     width: 2px;
     color: $gray;
   }
+}
+.mt-1 {
+  margin-top: 2rem;
 }
