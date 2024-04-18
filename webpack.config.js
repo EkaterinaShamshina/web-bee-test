@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 const PrettierPlugin = require("prettier-webpack-plugin");
-const fs = require("fs");
+const fs = require("fs")
 
 const pages = []
 const files = fs.readdirSync('./src/html');
@@ -65,7 +65,7 @@ module.exports = {
             fix: true
         }),
         new PrettierPlugin()
-    ],
+    ].concat(multipleHtmlPlugins),
     module: {
         rules: [
             // JavaScript
@@ -92,4 +92,3 @@ module.exports = {
         ],
     }
 }
-
