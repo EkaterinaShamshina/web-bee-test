@@ -22,7 +22,7 @@ body {
   font-weight: 400 !important;
 }
 .container {
-  max-width: 1376px;
+  max-width: 1400px;
 }
 header {
   background-color: $white;
@@ -38,7 +38,7 @@ a {
 .nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2rem;
   &-left {
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     padding: 0;
     flex: 1;
     &::before {
@@ -207,11 +207,26 @@ a {
   }
 }
 .main {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 79%;
+  gap: 2rem;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-basis: 20.5%;
 }
 article {
   background-color: $white;
   box-shadow: 0px 0px 2px 0px #0000001a;
+
   &.active {
     padding: 56px 32px 32px;
   }
@@ -275,8 +290,8 @@ article {
 }
 .card {
   align-items: center;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
+  text-align: center;
+  padding: 2rem 0 1rem;
   border: none;
   box-shadow: 0px 0px 2px 0px #0000001a;
   border-radius: 0;
@@ -286,8 +301,11 @@ article {
 }
 .social {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  max-width: 76px;
+  margin: 0 auto;
+
   & button {
     border-style: none;
     &:hover {
@@ -318,8 +336,6 @@ article {
   }
 }
 .accordion {
-  margin-top: 1.6rem;
-
   &-body {
     display: flex;
   }
