@@ -8,10 +8,10 @@ function init() {
   var myMap = new ymaps.Map('map', {
     // Координаты центра карты.
     // Порядок по умолчнию: «широта, долгота».
-    center: [55.76, 37.64],
+    center: [56.74619676730309, 37.14725741534418],
     // Уровень масштабирования. Допустимые значения:
     // от 0 (весь мир) до 19.
-    zoom: 12,
+    zoom: 16,
     // Элементы управления
     // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
     controls: [
@@ -36,12 +36,15 @@ function init() {
 
   // Добавление метки
   // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
-  var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
-    // Хинт показывается при наведении мышкой на иконку метки.
-    hintContent: 'Содержимое всплывающей подсказки',
-    // Балун откроется при клике по метке.
-    balloonContent: 'Содержимое балуна',
-  })
+  var myPlacemark = new ymaps.Placemark(
+    [56.74619676730309, 37.14725741534418],
+    {
+      // Хинт показывается при наведении мышкой на иконку метки.
+      hintContent: 'Содержимое всплывающей подсказки',
+      // Балун откроется при клике по метке.
+      balloonContent: 'Содержимое балуна',
+    }
+  )
 
   // После того как метка была создана, добавляем её на карту.
   myMap.geoObjects.add(myPlacemark)

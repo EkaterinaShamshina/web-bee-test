@@ -7,11 +7,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>Ekaterina Shamshina</title>
-    <script
-      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-      type="text/javascript"
-    ></script>
-  </head>
+  <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
   <body>
     <header>
       <div class="header">
@@ -82,14 +78,14 @@
                 <li class="nav-item">
                   <a
                     href="map.html"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-map px-1 px-md-3 active"
+                    class="nav-link text-reset nav-link-item-small nav-link-item-small-map px-1 px-md-3"
                     >Map</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
                     href="time.html"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-time px-1 px-md-3"
+                    class="nav-link text-reset nav-link-item-small nav-link-item-small-time px-1 px-md-3 active"
                     >Time</a
                   >
                 </li>
@@ -157,9 +153,7 @@
     </header>
     <div class="container">
       <div class="row justify-content-between main">
-        <main class="col-12">
-          <div id="map" style="width: 100%; height: 400px"></div>
-        </main>
+        <main class="col-lg-9 col-md-8 col-12 order-last order-md-first"></main>
       </div>
     </div>
   </body>
