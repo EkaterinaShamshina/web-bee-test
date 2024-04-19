@@ -21,5 +21,8 @@
               "endOfLine": "auto"
             }
         ]
+    },
+    "globals": {
+        "window": true
     }
 }
