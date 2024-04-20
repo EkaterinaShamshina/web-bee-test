@@ -3,49 +3,30 @@ const ymaps = window.ymaps
 ymaps.ready(init)
 
 function init() {
-  // Создание карты.
-  // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
   var myMap = new ymaps.Map('map', {
-    // Координаты центра карты.
-    // Порядок по умолчнию: «широта, долгота».
-    center: [56.74619676730309, 37.14725741534418],
-    // Уровень масштабирования. Допустимые значения:
-    // от 0 (весь мир) до 19.
-    zoom: 16,
-    // Элементы управления
-    // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
-    controls: [
-      'zoomControl', // Ползунок масштаба
-      'rulerControl', // Линейка
-      'routeButtonControl', // Панель маршрутизации
-      'trafficControl', // Пробки
-      'typeSelector', // Переключатель слоев карты
-      'fullscreenControl', // Полноэкранный режим
-
-      // Поисковая строка
-      new ymaps.control.SearchControl({
-        options: {
-          // вид - поисковая строка
-          size: 'large',
-          // Включим возможность искать не только топонимы, но и организации.
-          provider: 'yandex#search',
-        },
-      }),
-    ],
+    center: [56, 37],
+    zoom: 8,
   })
 
-  // Добавление метки
-  // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
-  var myPlacemark = new ymaps.Placemark(
-    [56.74619676730309, 37.14725741534418],
-    {
-      // Хинт показывается при наведении мышкой на иконку метки.
-      hintContent: 'Содержимое всплывающей подсказки',
-      // Балун откроется при клике по метке.
-      balloonContent: 'Содержимое балуна',
-    }
-  )
+  var geolocation = ymaps.geolocation
 
-  // После того как метка была создана, добавляем её на карту.
-  myMap.geoObjects.add(myPlacemark)
+  geolocation
+    .get({
+      // Выставляем опцию для определения положения по ip
+      provider: 'yandex',
+      // Карта автоматически отцентрируется по положению пользователя.
+      mapStateAutoApply: true,
+      // Включим автоматическое геокодирование результата.
+      autoReverseGeocode: true,
+    })
+    .then(function (result) {
+      // Выведем результат геокодирования.
+      myMap.geoObjects.add(result.geoObjects)
+
+      var address = result.geoObjects.get(0).properties.get('text')
+      document.getElementById('address').innerText = address
+
+      // Выведем в консоль результат геокодирования.
+      console.log(result.geoObjects.get(0).properties.get('metaDataProperty'))
+    })
 }
