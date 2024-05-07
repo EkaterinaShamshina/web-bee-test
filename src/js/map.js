@@ -1,14 +1,20 @@
 const ymaps = window.ymaps
-
 ymaps.ready(init)
+//Прелоадер
+document.addEventListener('DOMContentLoaded', function () {
+  window.setTimeout(function () {
+    document.querySelector('.content > .spinner-border').classList.add('d-none')
+    document.querySelector('main').classList.remove('d-none')
+  }, 500)
+})
 
 function init() {
+  var geolocation = ymaps.geolocation
+
   var myMap = new ymaps.Map('map', {
     center: [56, 37],
-    zoom: 8,
+    zoom: 16,
   })
-
-  var geolocation = ymaps.geolocation
 
   geolocation
     .get({
@@ -25,8 +31,5 @@ function init() {
 
       var address = result.geoObjects.get(0).properties.get('text')
       document.getElementById('address').innerText = address
-
-      // Выведем в консоль результат геокодирования.
-      console.log(result.geoObjects.get(0).properties.get('metaDataProperty'))
     })
 }
