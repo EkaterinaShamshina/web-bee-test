@@ -2,10 +2,8 @@ const ymaps = window.ymaps
 ymaps.ready(init)
 //Прелоадер
 document.addEventListener('DOMContentLoaded', function () {
-  window.setTimeout(function () {
-    document.querySelector('.content > .spinner-border').classList.add('d-none')
-    document.querySelector('main').classList.remove('d-none')
-  }, 500)
+  document.querySelector('.content > .spinner-border').classList.add('d-none')
+  document.querySelector('main').classList.remove('d-none')
 })
 
 function init() {
@@ -13,7 +11,7 @@ function init() {
 
   var myMap = new ymaps.Map('map', {
     center: [56, 37],
-    zoom: 16,
+    zoom: 7,
   })
 
   geolocation
