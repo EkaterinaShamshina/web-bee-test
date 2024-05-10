@@ -152,9 +152,32 @@
       </div>
     </header>
     <div class="container">
-      <div class="row justify-content-between main">
-        <main class="col-lg-9 col-md-8 col-12 order-last order-md-first"></main>
-      </div>
+      <section class="section-bg">
+        <div class="section-text d-flex">
+          <p class="mb-0">Timer</p>
+          <div class="section-buttons">
+            <button
+              type="button"
+              class="btn btn-accordion"
+              aria-label="Свернуть"
+            ></button>
+            <button
+              type="button"
+              class="btn btn-close"
+              aria-label="Закрыть"
+            ></button>
+            <button
+              type="button"
+              class="btn btn-refresh"
+              aria-label="Обновить"
+            ></button>
+          </div>
+        </div>
+
+        <div class="content">
+          <div id="timer"></div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
