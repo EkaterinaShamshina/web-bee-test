@@ -1,6 +1,9 @@
 const localStorage = window.localStorage
+const sessionStorage = window.sessionStorage
+
 // Функция, которая обновляет таймер каждую секунду
 function updateTimer() {
+  // Проверяем, есть ли сохраненное значение в localStorage
   let startTime
   let timer = document.getElementById('timer')
 
@@ -10,7 +13,6 @@ function updateTimer() {
     startTime = new Date().getTime() // Если нет сохраненного значения, устанавливаем текущее время
     localStorage.setItem('startTime', startTime) // Сохраняем время начала в localStorage
   }
-  // Проверяем, есть ли сохраненное значение в localStorage
 
   // Функция для обновления таймера
   function displayTimer() {
@@ -29,11 +31,19 @@ function updateTimer() {
       timer.textContent = hours + ':' + minutes + ':' + seconds
     }
   }
-
-  displayTimer() // Показываем таймер сразу
-
   // Обновляем таймер каждую секунду
   setInterval(displayTimer, 1000)
 }
-
-updateTimer() // Запускаем таймер при загрузке страницы
+// Запуск отсчета времени при загрузке страницы
+window.onload = function () {
+  updateTimer()
+}
+// Сброс значения таймера при закрытии страницы
+window.onbeforeunload = function () {
+  let startTime = new Date().getTime()
+  sessionStorage.setItem('startTime', startTime.toString())
+}
+// При закрытии вкладки обнуляем таймер
+window.onunload = function () {
+  sessionStorage.removeItem('startTime')
+}
