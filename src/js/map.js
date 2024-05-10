@@ -1,10 +1,19 @@
-const ymaps = window.ymaps
-ymaps.ready(init)
 //Прелоадер
+
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('.content > .spinner-border').classList.add('d-none')
-  document.querySelector('main').classList.remove('d-none')
+  const spinner = document.querySelector('.content > .spinner-border')
+  const main = document.querySelector('main')
+  if (spinner) {
+    spinner.classList.add('d-none')
+    main.classList.remove('d-none')
+  }
 })
+
+//Яндекс-карта
+const ymaps = window.ymaps
+if (ymaps) {
+  ymaps.ready(init)
+}
 
 function init() {
   var geolocation = ymaps.geolocation
