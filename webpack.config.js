@@ -6,10 +6,10 @@ const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 const PrettierPlugin = require("prettier-webpack-plugin");
-// const fs = require("fs")
+const fs = require("fs")
 
-// const pages = []
-// const files = fs.readdirSync('./src/html');
+const pages = []
+const files = fs.readdirSync('./src/html');
 
 // files.forEach(f => {
 //     if (f.endsWith('.html')) {
@@ -17,12 +17,12 @@ const PrettierPlugin = require("prettier-webpack-plugin");
 //     }
 // })
 
-// const multipleHtmlPlugins = pages.map(name => {
-//     return new HtmlWebpackPlugin({
-//         template: `./src/html/${name}.html`,
-//         filename: `${name}.html`,
-//     })
-// });
+const multipleHtmlPlugins = pages.map(name => {
+    return new HtmlWebpackPlugin({
+        template: `./src/html/${name}.html`,
+        filename: `${name}.html`,
+    })
+});
 
 module.exports = {
     mode: 'development',
@@ -65,8 +65,8 @@ module.exports = {
             fix: true
         }),
         new PrettierPlugin()
-    ],
-    // .concat(multipleHtmlPlugins),
+    ]
+    .concat(multipleHtmlPlugins),
     module: {
         rules: [
             // Html

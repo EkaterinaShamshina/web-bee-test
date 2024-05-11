@@ -643,7 +643,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n/* harmony import */ var _node_modules_bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/bootstrap/scss/bootstrap.scss */ \"./node_modules/bootstrap/scss/bootstrap.scss\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var _js_timer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/timer.js */ \"./src/js/timer.js\");\n/* harmony import */ var _js_timer_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_timer_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/map.js */ \"./src/js/map.js\");\n/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_map_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n//# sourceURL=webpack://start_template_webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n/* harmony import */ var _node_modules_bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/bootstrap/scss/bootstrap.scss */ \"./node_modules/bootstrap/scss/bootstrap.scss\");\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var _js_app_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/app.js */ \"./src/js/app.js\");\n/* harmony import */ var _js_timer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/timer.js */ \"./src/js/timer.js\");\n/* harmony import */ var _js_timer_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_timer_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/map.js */ \"./src/js/map.js\");\n/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_map_js__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://start_template_webpack/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/app.js":
+/*!***********************!*\
+  !*** ./src/js/app.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _html_activity_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../html/activity.html */ \"./src/html/activity.html\");\n/* harmony import */ var _html_map_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../html/map.html */ \"./src/html/map.html\");\n/* harmony import */ var _html_time_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../html/time.html */ \"./src/html/time.html\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var activityLink = document.getElementById('activityLink');\n  var mapLink = document.getElementById('mapLink');\n  var timerLink = document.getElementById('timerLink');\n  var content = document.getElementById('content');\n  function showPage(page) {\n    content.innerHTML = '';\n    if (page === 'activity') {\n      content.innerHTML = _html_activity_html__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n    } else if (page === 'map') {\n      content.innerHTML = _html_map_html__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n    } else if (page === 'timer') {\n      content.innerHTML = _html_time_html__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\n    }\n  }\n  activityLink.addEventListener('click', function () {\n    showPage('activity');\n    highlightLink(activityLink);\n  });\n  mapLink.addEventListener('click', function () {\n    showPage('map');\n    highlightLink(mapLink);\n  });\n  timerLink.addEventListener('click', function () {\n    showPage('timer');\n    highlightLink(timerLink);\n  });\n  function highlightLink(link) {\n    var links = document.querySelectorAll('ul li a');\n    links.forEach(function (item) {\n      item.classList.remove('active');\n    });\n    link.classList.add('active');\n  }\n\n  // Показываем первую страницу по умолчанию\n  showPage('activity');\n  highlightLink(activityLink);\n});\n\n//# sourceURL=webpack://start_template_webpack/./src/js/app.js?");
 
 /***/ }),
 
@@ -678,6 +689,50 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/html/activity.html":
+/*!********************************!*\
+  !*** ./src/html/activity.html ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/html-loader/dist/runtime/getUrl.js */ \"./node_modules/html-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../images/poster.jpg */ \"./src/images/poster.jpg\"), __webpack_require__.b);\nvar ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../images/Photo.jpg */ \"./src/images/Photo.jpg\"), __webpack_require__.b);\n// Module\nvar ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);\nvar ___HTML_LOADER_REPLACEMENT_1___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_1___);\nvar code = \"<div class=\\\"container\\\">\\n  <div class=\\\"row justify-content-between main\\\">\\n    <main class=\\\"col-lg-9 col-md-8 col-12 order-last order-md-first\\\">\\n      <article class=\\\"active\\\">\\n        <img\\n          src=\\\"\" + ___HTML_LOADER_REPLACEMENT_0___ + \"\\\"\\n          class=\\\"article_image img-fluid\\\"\\n          alt=\\\"article_image\\\"\\n        />\\n        <p class=\\\"blockquote-comment\\\">\\n          <cite title=\\\"Author\\\">\\n            <a href=\\\"#\\\" class=\\\"fst-normal comment-author\\\"\\n              >Jason Anderson</a\\n            ></cite\\n          >\\n          commented:\\n        </p>\\n        <div class=\\\"d-flex gap-2 mb-3\\\">\\n          <div class=\\\"vr blockquote-vr\\\"></div>\\n          <blockquote class=\\\"blockquote mb-0\\\">\\n            <p>\\n              Don’t sit and wait. Get out there, feel life. Touch the sun, and\\n              immerse in the sea. Keep love in your heart. A life without it is\\n              like a sunless garden when the flowers are dead. Because summer is\\n              passion, memories, light breeze, the sun that appears on the skin\\n              and caresses the face.\\n            </p>\\n            <footer class=\\\"blockquote-footer\\\">\\n              <cite title=\\\"Author\\\" class=\\\"fst-normal\\\">Jason</cite>,\\n              <span class=\\\"fst-italic\\\" datetime=\\\"10:30:00\\\">10:30 am</span>\\n            </footer>\\n          </blockquote>\\n        </div>\\n        <div class=\\\"article-footer\\\">\\n          <p class=\\\"article-footer-number article-footer-number_eye mb-0\\\">\\n            432\\n          </p>\\n          <p class=\\\"article-footer-number article-footer-number_comment mb-0\\\">\\n            47\\n          </p>\\n        </div>\\n      </article>\\n      <article>\\n        <div class=\\\"accordion accordion-flush\\\" id=\\\"accordionArticle\\\">\\n          <div class=\\\"accordion-item\\\">\\n            <h2 class=\\\"accordion-header\\\" id=\\\"headingOne\\\">\\n              <button\\n                class=\\\"accordion-button collapsed text-reset\\\"\\n                type=\\\"button\\\"\\n                data-bs-toggle=\\\"collapse\\\"\\n                data-bs-target=\\\"#collapseThree\\\"\\n                aria-expanded=\\\"true\\\"\\n                aria-controls=\\\"collapseThree\\\"\\n              >\\n                <p class=\\\"article-header__name mb-0\\\">Sunset Sunset Sunset</p>\\n                <p class=\\\"article-header__time mb-0\\\">53 minutes ago</p>\\n              </button>\\n            </h2>\\n            <div\\n              id=\\\"collapseThree\\\"\\n              class=\\\"accordion-collapse collapse\\\"\\n              aria-labelledby=\\\"headingOne\\\"\\n              data-bs-parent=\\\"#accordionArticle\\\"\\n            >\\n              <div class=\\\"accordion-body\\\">\\n                <strong>This is the article body.</strong> As I understand it,\\n                this is the same article as the article above, only closed.\\n              </div>\\n            </div>\\n          </div>\\n        </div>\\n      </article>\\n      <article>\\n        <div class=\\\"accordion accordion-flush\\\" id=\\\"accordionArticle\\\">\\n          <div class=\\\"accordion-item\\\">\\n            <h2 class=\\\"accordion-header\\\" id=\\\"headingOne\\\">\\n              <button\\n                class=\\\"accordion-button collapsed text-reset\\\"\\n                type=\\\"button\\\"\\n                data-bs-toggle=\\\"collapse\\\"\\n                data-bs-target=\\\"#collapseFour\\\"\\n                aria-expanded=\\\"true\\\"\\n                aria-controls=\\\"collapseFour\\\"\\n              >\\n                <p class=\\\"article-header__name mb-0\\\">Morning of Siberia</p>\\n                <p class=\\\"article-header__time mb-0\\\">56 minutes ago</p>\\n              </button>\\n            </h2>\\n            <div\\n              id=\\\"collapseFour\\\"\\n              class=\\\"accordion-collapse collapse\\\"\\n              aria-labelledby=\\\"headingOne\\\"\\n              data-bs-parent=\\\"#accordionArticle\\\"\\n            >\\n              <div class=\\\"accordion-body\\\">\\n                <strong>This is the article body.</strong> As I understand it,\\n                this is the same article as the article above, only closed.\\n              </div>\\n            </div>\\n          </div>\\n        </div>\\n      </article>\\n    </main>\\n    <aside class=\\\"col-lg-3 col-md-4 col-12 order-first order-md-last\\\">\\n      <div class=\\\"card\\\">\\n        <img\\n          src=\\\"\" + ___HTML_LOADER_REPLACEMENT_1___ + \"\\\"\\n          class=\\\"card-img img-fluid rounded-circle\\\"\\n          alt=\\\"avatar\\\"\\n        />\\n\\n        <div class=\\\"card-body\\\">\\n          <h4 class=\\\"card-title\\\">Hanna Dorman</h4>\\n          <p class=\\\"card-text\\\">UX/UI designer</p>\\n          <div class=\\\"social\\\">\\n            <button\\n              type=\\\"button\\\"\\n              class=\\\"social__picture social__picture_telegram\\\"\\n            >\\n              <a href=\\\"#\\\"></a>\\n            </button>\\n            <button type=\\\"button\\\" class=\\\"social__picture social__picture_IG\\\">\\n              <a href=\\\"#\\\"></a>\\n            </button>\\n            <button\\n              type=\\\"button\\\"\\n              class=\\\"social__picture social__picture_whatsapp\\\"\\n            >\\n              <a href=\\\"#\\\"></a>\\n            </button>\\n          </div>\\n        </div>\\n      </div>\\n      <div class=\\\"accordion accordion-flush\\\" id=\\\"accordionNavigation\\\">\\n        <div class=\\\"accordion-item\\\">\\n          <h2 class=\\\"accordion-header\\\" id=\\\"accordionOne\\\">\\n            <button\\n              class=\\\"accordion-button text-reset\\\"\\n              type=\\\"button\\\"\\n              data-bs-toggle=\\\"collapse\\\"\\n              data-bs-target=\\\"#collapseOne\\\"\\n              aria-expanded=\\\"false\\\"\\n              aria-controls=\\\"collapseOne\\\"\\n            >\\n              Navigation\\n            </button>\\n          </h2>\\n          <div\\n            id=\\\"collapseOne\\\"\\n            class=\\\"accordion-collapse collapse show\\\"\\n            aria-labelledby=\\\"accordionOne\\\"\\n            data-bs-parent=\\\"#accordionNavigation\\\"\\n          >\\n            <div class=\\\"accordion-body\\\">\\n              <nav class=\\\"navbar navbar-3\\\">\\n                <ul class=\\\"accordion-nav nav\\\">\\n                  <li class=\\\"accordion-nav-item\\\">\\n                    <a\\n                      href=\\\"#\\\"\\n                      class=\\\"nav-link nav-link-item nav-link-item-profile text-reset\\\"\\n                      >My profile</a\\n                    >\\n                  </li>\\n                  <li class=\\\"accordion-nav-item\\\">\\n                    <a\\n                      href=\\\"#\\\"\\n                      class=\\\"nav-link nav-link-item nav-link-item-balance text-reset\\\"\\n                      >Balance</a\\n                    >\\n                    <span class=\\\"badge badge-balance\\\">$ 1,430</span>\\n                  </li>\\n                  <li class=\\\"accordion-nav-item\\\">\\n                    <a\\n                      href=\\\"#\\\"\\n                      class=\\\"nav-link nav-link-item nav-link-item-connections text-reset\\\"\\n                      >Connections</a\\n                    >\\n                    <a href=\\\"#\\\" class=\\\"badge badge-circle bg-red\\\">29</a>\\n                  </li>\\n                  <li class=\\\"accordion-nav-item\\\">\\n                    <a\\n                      href=\\\"#\\\"\\n                      class=\\\"nav-link nav-link-item nav-link-item-friends text-reset\\\"\\n                      >Friends</a\\n                    >\\n                  </li>\\n                  <li class=\\\"divider\\\"><hr class=\\\"hr\\\" /></li>\\n                  <li class=\\\"accordion-nav-item\\\">\\n                    <a\\n                      href=\\\"#\\\"\\n                      class=\\\"nav-link nav-link-item nav-link-item-events text-reset\\\"\\n                      >Events</a\\n                    >\\n                    <a href=\\\"#\\\" class=\\\"badge badge-circle bg-green\\\">45</a>\\n                  </li>\\n                  <li class=\\\"accordion-nav-item\\\">\\n                    <a\\n                      href=\\\"#\\\"\\n                      class=\\\"nav-link nav-link-item nav-link-item-settings text-reset\\\"\\n                      >Settings</a\\n                    >\\n                  </li>\\n                </ul>\\n              </nav>\\n            </div>\\n          </div>\\n        </div>\\n      </div>\\n      <div class=\\\"accordion accordion-flush\\\" id=\\\"accordionForm\\\">\\n        <div class=\\\"accordion-item\\\">\\n          <h2 class=\\\"accordion-header\\\" id=\\\"headingOne\\\">\\n            <button\\n              class=\\\"accordion-button text-reset\\\"\\n              type=\\\"button\\\"\\n              data-bs-toggle=\\\"collapse\\\"\\n              data-bs-target=\\\"#collapseTwo\\\"\\n              aria-expanded=\\\"true\\\"\\n              aria-controls=\\\"collapseTwo\\\"\\n            >\\n              Share your thoughts\\n            </button>\\n          </h2>\\n          <div\\n            id=\\\"collapseTwo\\\"\\n            class=\\\"accordion-collapse collapse show\\\"\\n            aria-labelledby=\\\"headingOne\\\"\\n            data-bs-parent=\\\"#accordionForm\\\"\\n          >\\n            <div class=\\\"accordion-body\\\">\\n              <form class=\\\"thoughts-form\\\">\\n                <textarea\\n                  placeholder=\\\"Enter your message...\\\"\\n                  cols=\\\"25\\\"\\n                  rows=\\\"4\\\"\\n                ></textarea>\\n                <button type=\\\"submit\\\" class=\\\"btn btn-primary\\\">Save</button>\\n              </form>\\n            </div>\\n          </div>\\n        </div>\\n      </div>\\n    </aside>\\n  </div>\\n</div>\\n\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://start_template_webpack/./src/html/activity.html?");
+
+/***/ }),
+
+/***/ "./src/html/map.html":
+/*!***************************!*\
+  !*** ./src/html/map.html ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<\" + \"script\\n  src=\\\"https://api-maps.yandex.ru/2.1/?apikey=caf16472-73c9-4d47-9ba1-cdb47498f5a0&lang=ru_RU\\\"\\n  type=\\\"text/javascript\\\"\\n><\" + \"/script>\\n<div class=\\\"container\\\">\\n  <section class=\\\"section-bg\\\">\\n    <div class=\\\"section-text d-flex\\\">\\n      <p class=\\\"mb-0\\\">Basic map</p>\\n      <div class=\\\"section-buttons\\\">\\n        <button\\n          type=\\\"button\\\"\\n          class=\\\"btn btn-accordion\\\"\\n          aria-label=\\\"Свернуть\\\"\\n        ></button>\\n        <button\\n          type=\\\"button\\\"\\n          class=\\\"btn btn-close\\\"\\n          aria-label=\\\"Закрыть\\\"\\n        ></button>\\n        <button\\n          type=\\\"button\\\"\\n          class=\\\"btn btn-refresh\\\"\\n          aria-label=\\\"Обновить\\\"\\n        ></button>\\n      </div>\\n    </div>\\n\\n    <div class=\\\"content\\\">\\n      <div class=\\\"spinner-border d-flex justify-content-center\\\" role=\\\"status\\\">\\n        <span class=\\\"visually-hidden\\\"></span>\\n      </div>\\n\\n      <main class=\\\"d-none\\\">\\n        <span id=\\\"aw\\\">Ваш адрес: <span id=\\\"address\\\"></span></span>\\n        <div id=\\\"map\\\" style=\\\"width: 100%; height: 300px\\\"></div>\\n      </main>\\n    </div>\\n  </section>\\n</div>\\n\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://start_template_webpack/./src/html/map.html?");
+
+/***/ }),
+
+/***/ "./src/html/time.html":
+/*!****************************!*\
+  !*** ./src/html/time.html ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<div class=\\\"container\\\">\\n  <section class=\\\"section-bg\\\">\\n    <div class=\\\"section-text d-flex\\\">\\n      <p class=\\\"mb-0\\\">Timer</p>\\n      <div class=\\\"section-buttons\\\">\\n        <button\\n          type=\\\"button\\\"\\n          class=\\\"btn btn-accordion\\\"\\n          aria-label=\\\"Свернуть\\\"\\n        ></button>\\n        <button\\n          type=\\\"button\\\"\\n          class=\\\"btn btn-close\\\"\\n          aria-label=\\\"Закрыть\\\"\\n        ></button>\\n        <button\\n          type=\\\"button\\\"\\n          class=\\\"btn btn-refresh\\\"\\n          aria-label=\\\"Обновить\\\"\\n        ></button>\\n      </div>\\n    </div>\\n\\n    <div class=\\\"content\\\">\\n      <div id=\\\"timer\\\"></div>\\n    </div>\\n  </section>\\n</div>\\n<\" + \"script>\\n  const sessionStorage = window.sessionStorage\\n\\n  // Функция, которая обновляет таймер каждую секунду\\n  function updateTimer() {\\n    // Проверяем, есть ли сохраненное значение в sessionStorage\\n    let startTime\\n    let timer = document.getElementById('timer')\\n\\n    if (sessionStorage.getItem('startTime')) {\\n      startTime = parseInt(sessionStorage.getItem('startTime'))\\n    } else {\\n      startTime = new Date().getTime() // Если нет сохраненного значения, устанавливаем текущее время\\n      sessionStorage.setItem('startTime', startTime) // Сохраняем время начала в sessionStorage\\n    }\\n\\n    // Функция для обновления таймера\\n    function displayTimer() {\\n      if (timer) {\\n        var currentTime = new Date().getTime()\\n        var timeElapsed = new Date(currentTime - startTime)\\n\\n        var hours = timeElapsed.getUTCHours()\\n        var minutes = timeElapsed.getUTCMinutes()\\n        var seconds = timeElapsed.getUTCSeconds()\\n\\n        hours = hours < 10 ? '0' + hours : hours\\n        minutes = minutes < 10 ? '0' + minutes : minutes\\n        seconds = seconds < 10 ? '0' + seconds : seconds\\n\\n        timer.textContent = hours + ':' + minutes + ':' + seconds\\n      }\\n    }\\n    // Обновляем таймер каждую секунду\\n    setInterval(displayTimer, 1000)\\n  }\\n  // Запуск отсчета времени при загрузке страницы\\n  window.onload = function () {\\n    updateTimer()\\n  }\\n<\" + \"/script>\\n\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://start_template_webpack/./src/html/time.html?");
+
+/***/ }),
+
+/***/ "./node_modules/html-loader/dist/runtime/getUrl.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/html-loader/dist/runtime/getUrl.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  }\n  if (!url) {\n    return url;\n  }\n\n  // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n  url = String(url.__esModule ? url.default : url);\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  }\n  if (options.maybeNeedQuotes && /[\\t\\n\\f\\r \"'=<>`]/.test(url)) {\n    return \"\\\"\".concat(url, \"\\\"\");\n  }\n  return url;\n};\n\n//# sourceURL=webpack://start_template_webpack/./node_modules/html-loader/dist/runtime/getUrl.js?");
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/scss/bootstrap.scss":
 /*!****************************************************!*\
   !*** ./node_modules/bootstrap/scss/bootstrap.scss ***!
@@ -709,6 +764,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://start_template_webpack/./src/styles/main.scss?");
 
+/***/ }),
+
+/***/ "./src/images/Photo.jpg":
+/*!******************************!*\
+  !*** ./src/images/Photo.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b1e7dd4c17214a14f3ee.jpg\";\n\n//# sourceURL=webpack://start_template_webpack/./src/images/Photo.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/poster.jpg":
+/*!*******************************!*\
+  !*** ./src/images/poster.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"31c0954c793205e85c2b.jpg\";\n\n//# sourceURL=webpack://start_template_webpack/./src/images/poster.jpg?");
+
 /***/ })
 
 /******/ 	});
@@ -737,6 +814,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -762,6 +842,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -776,6 +868,55 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/
