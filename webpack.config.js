@@ -68,6 +68,11 @@ module.exports = {
     ].concat(multipleHtmlPlugins),
     module: {
         rules: [
+            // Html
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+              },
             // JavaScript
             {
                 test: /\.js$/,

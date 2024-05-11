@@ -1,198 +1,111 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Ekaterina Shamshina</title>
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=caf16472-73c9-4d47-9ba1-cdb47498f5a0&lang=ru_RU"
-      type="text/javascript"
-    ></script>
-  <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
-  <body>
-    <header>
-      <div class="header">
-        <div class="container">
-          <nav class="navbar-expand-sm navbar navbar-1 py-0 py-md-2">
-            <div class="nav-left">
-              <a href="#" class="back-button text-reset"></a>
-              <a href="#" class="nav-link text-reset fs-4"
-                ><b>User pages</b> - Profile</a
-              >
-            </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01"
-              aria-expanded="false"
-              aria-label="Переключатель навигации"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse nav-right"
-              id="navbarTogglerDemo01"
-            >
-              <ul class="nav">
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-reset nav-link-item nav-link-item-statistics"
-                    >Statistics</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-reset nav-link-item nav-link-item-invoices"
-                    >Invoices</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-reset nav-link-item nav-link-item-shedule"
-                    >Schedule</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div class="header">
-        <div class="container">
-          <nav
-            class="navbar navbar-2 justify-content-center justify-content-md-between"
-          >
-            <div class="nav-left">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a
-                    href="index.html"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-activity px-1 px-md-3"
-                    >Activity</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="map.html"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-map px-1 px-md-3 active"
-                    >Map</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="time.html"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-time px-1 px-md-3"
-                    >Time</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="nav-right">
-              <ul class="nav flex-nowrap">
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-notes px-1 px-md-3"
-                    >Notes</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-friends px-1 px-md-3"
-                    >Friends</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="#"
-                    class="nav-link text-reset nav-link-item-small nav-link-item-small-photos px-1 px-md-3"
-                    >Photos</a
-                  >
-                </li>
-                <div class="dropdown">
-                  <a
-                    class="btn dropdown-toggle px-1 py-1"
-                    href="#"
-                    role="button"
-                    id="dropdownMenuLink"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="./images/settings.svg"
-                      alt="settings"
-                      class="settings"
-                    />
-                  </a>
-
-                  <ul
-                    class="dropdown-menu dropdown-menu-end"
-                    aria-labelledby="dropdownMenuLink"
-                  >
-                    <li><a class="dropdown-item fs-6" href="#">Setting</a></li>
-                    <li>
-                      <a class="dropdown-item fs-6" href="#">Another setting</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item fs-6" href="#"
-                        >Something else here</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <div class="container">
-      <section class="section-bg">
-        <div class="section-text d-flex">
-          <p class="mb-0">Basic map</p>
-          <div class="section-buttons">
-            <button
-              type="button"
-              class="btn btn-accordion"
-              aria-label="Свернуть"
-            ></button>
-            <button
-              type="button"
-              class="btn btn-close"
-              aria-label="Закрыть"
-            ></button>
-            <button
-              type="button"
-              class="btn btn-refresh"
-              aria-label="Обновить"
-            ></button>
-          </div>
-        </div>
-
-        <div class="content">
-          <div
-            class="spinner-border d-flex justify-content-center"
-            role="status"
-          >
-            <span class="visually-hidden"></span>
-          </div>
-
-          <main class="d-none">
-            <span id="aw">Ваш адрес: <span id="address"></span></span>
-            <div id="map" style="width: 100%; height: 300px"></div>
-          </main>
-        </div>
-      </section>
-    </div>
-  </body>
-</html>
+<head><script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve './images/settings.svg' in 'C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\src\html'
+  ModuleNotFoundError: Module not found: Error: Can't resolve './images/settings.svg' in 'C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\src\html'
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\Compilation.js:2029:28
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:895:13
+      at eval (eval at create (C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:332:22
+      at eval (eval at create (C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:509:22
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:151:11
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:767:25
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:979:8
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:1109:5
+  Module not found: Error: Can't resolve './images/settings.svg' in 'C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\src\html'
+  ModuleNotFoundError: Module not found: Error: Can't resolve './images/settings.svg' in 'C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\src\html'
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\Compilation.js:2029:28
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:895:13
+      at eval (eval at create (C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:332:22
+      at eval (eval at create (C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:509:22
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:151:11
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:767:25
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:979:8
+      at C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\node_modules\webpack\lib\NormalModuleFactory.js:1109:5
+  
+  - Compilation.js:2029 
+    [web-bee-test]/[webpack]/lib/Compilation.js:2029:28
+  
+  - NormalModuleFactory.js:895 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:895:13
+  
+  
+  - NormalModuleFactory.js:332 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:332:22
+  
+  
+  - NormalModuleFactory.js:509 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:509:22
+  
+  - NormalModuleFactory.js:151 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:151:11
+  
+  - NormalModuleFactory.js:767 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:767:25
+  
+  - NormalModuleFactory.js:979 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:979:8
+  
+  - NormalModuleFactory.js:1109 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:1109:5
+  
+  - Module not found: Error: Can't resolve './images/settings.svg' in 'C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\src\html'
+  
+  - ModuleNotFoundError: Module not found: Error: Can't resolve './images/settings.svg' in 'C:\Users\shams\OneDrive\Рабочий стол\web-bee-test\src\html'
+  
+  - Compilation.js:2029 
+    [web-bee-test]/[webpack]/lib/Compilation.js:2029:28
+  
+  - NormalModuleFactory.js:895 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:895:13
+  
+  
+  - NormalModuleFactory.js:332 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:332:22
+  
+  
+  - NormalModuleFactory.js:509 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:509:22
+  
+  - NormalModuleFactory.js:151 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:151:11
+  
+  - NormalModuleFactory.js:767 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:767:25
+  
+  - NormalModuleFactory.js:979 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:979:8
+  
+  - NormalModuleFactory.js:1109 
+    [web-bee-test]/[webpack]/lib/NormalModuleFactory.js:1109:5
+  
+  - child-compiler.js:169 
+    [web-bee-test]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:564 finalCallback
+    [web-bee-test]/[webpack]/lib/Compiler.js:564:5
+  
+  - Compiler.js:590 
+    [web-bee-test]/[webpack]/lib/Compiler.js:590:11
+  
+  - Compiler.js:1213 
+    [web-bee-test]/[webpack]/lib/Compiler.js:1213:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [web-bee-test]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1209 
+    [web-bee-test]/[webpack]/lib/Compiler.js:1209:33
+  
+  - Compilation.js:2802 finalCallback
+    [web-bee-test]/[webpack]/lib/Compilation.js:2802:11
+  
+  - Compilation.js:3107 
+    [web-bee-test]/[webpack]/lib/Compilation.js:3107:11
+  
+  
+</pre>
