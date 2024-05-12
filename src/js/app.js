@@ -1,6 +1,7 @@
 import activityPage from '../html/activity.html'
 import mapPage from '../html/map.html'
 import timePage from '../html/time.html'
+import { init } from '../js/map.js'
 
 document.addEventListener('DOMContentLoaded', function () {
   const activityLink = document.getElementById('activityLink')
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       content.innerHTML = activityPage
     } else if (page === 'map') {
       content.innerHTML = mapPage
+      init()
     } else if (page === 'timer') {
       content.innerHTML = timePage
     }

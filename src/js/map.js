@@ -1,21 +1,15 @@
 //Прелоадер
 
-document.addEventListener('DOMContentLoaded', function () {
-  const spinner = document.querySelector('.content > .spinner-border')
-  const main = document.querySelector('main')
-  if (spinner) {
-    spinner.classList.add('d-none')
-    main.classList.remove('d-none')
-  }
-})
-
-//Яндекс-карта
-const ymaps = window.ymaps
-if (ymaps) {
-  ymaps.ready(init)
+function removeLoading() {
+  document.querySelector('.spinner-border').classList.remove('spinner-border')
+  document.querySelector('main').classList.remove('d-none')
 }
 
+//Яндекс-карта
 function init() {
+  const ymaps = window.ymaps
+  if (!ymaps) return
+
   var geolocation = ymaps.geolocation
 
   var myMap = new ymaps.Map('map', {
@@ -39,4 +33,7 @@ function init() {
       var address = result.geoObjects.get(0).properties.get('text')
       document.getElementById('address').innerText = address
     })
+  removeLoading()
 }
+
+export { init }
