@@ -37,3 +37,5 @@ function updateTimer() {
 window.onload = function () {
   updateTimer()
 }
+
+export { updateTimer }
