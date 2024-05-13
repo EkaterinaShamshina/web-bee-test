@@ -1,0 +1,35 @@
+<div class="container">
+  <section class="section-bg">
+    <div class="section-text d-flex">
+      <p class="mb-0">Basic map</p>
+      <div class="section-buttons">
+        <button
+          type="button"
+          class="btn btn-accordion"
+          aria-label="Свернуть"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-close"
+          aria-label="Закрыть"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-refresh"
+          aria-label="Обновить"
+        ></button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="spinner-border d-flex justify-content-center" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+
+      <main class="d-none">
+        <span id="aw">Ваш адрес: <span id="address"></span></span>
+        <div id="map" style="width: 100%; height: 300px"></div>
+      </main>
+    </div>
+  </section>
+</div>
